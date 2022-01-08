@@ -1,0 +1,273 @@
+// ========= General Styles
+
+// Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Overpass', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
+
+ul {
+    list-style: none;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+@mixin navStyle {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+    line-height: 30px;
+}
+
+.fontWhite {
+    color: hsl(0, 0%, 100%);
+}
+
+.fontBlue {
+    color: hsl(240, 2%, 79%);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: normal;
+}
+
+// ======== Header Styles
+// === Navigation
+header {
+    padding-bottom: 25vh; 
+    border-radius: 0 0 0 70px;
+    background: url("../img/bg-pattern-intro-desktop.svg") center/cover no-repeat, linear-gradient(to right, hsl(13, 100%, 72%),hsl(353, 100%, 62%)); 
+    nav {
+        @include navStyle; 
+        padding: 5vh 8vw;  
+        .nav {
+            @include navStyle; 
+            ul {
+                @include navStyle; 
+                li {
+                    margin-left: 4vw; 
+                }
+            }
+        } 
+    }
+}
+
+// === Hero Header
+header {
+    text-align: center;
+    h1 {
+        margin-top: 10vh; 
+        font-size: 3.5rem; 
+    }
+    p {
+        font-size: 1.3rem;
+        font-weight: light;
+        margin: 4vh 0; 
+    };
+}
+
+// === Buttons
+.button {
+    display: inline-block;
+    padding: 10px 20px; 
+    border-radius: 20px;
+    margin: 10px; 
+}
+
+.button {
+    width: 100px; 
+    &:hover {
+        background: hsl(355, 100%, 74%); 
+    }
+}
+
+.heroButton {
+    width: 150px; 
+    background: hsl(355, 100%, 74%);
+    &:hover {
+        background: hsl(0, 0%, 100%);
+        color: hsl(356, 100%, 66%); 
+    }
+}
+
+
+// ======== Main Styles
+// === Design for the future + Part 2
+.futureDesign {
+    background: url("../img/illustration-editor-desktop.svg") no-repeat;
+    background-position: 200% 50%;
+    text-align: center;
+    padding: 30vh 10vw; 
+    h2 {
+        font-size: 2.5rem; 
+        margin-bottom: 15vh;
+    }
+    article {
+        width: 50%;
+    }
+}
+
+.futureDesignTwo {
+    background: url("../img/illustration-laptop-desktop.svg") no-repeat;
+    background-position: -100% 50%;
+    padding: 25vh 10vw; 
+    position: relative;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    article {
+        grid-column: 2/3; 
+    }
+}
+
+.futureDesign, .futureDesignTwo {
+    article {
+        text-align: left;
+        h3 {
+            margin: 10vh 0 4vh 0; 
+            font-size: 1.5rem;
+        }
+        p {
+            color: hsl(207, 13%, 34%);
+        }
+    }
+}
+
+.fontDarkBlue {
+    color: hsl(208, 49%, 24%); 
+}
+
+// === Dark Section 
+.stateArt {
+    margin: 20vh 0; 
+    position: relative;
+    height: 400px; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: url("../img/bg-pattern-circles.svg") no-repeat, linear-gradient(to right, hsl(237, 17%, 21%),hsl(237, 23%, 32%));
+    background-position: -75% 80%;
+    border-radius: 0 0 0 70px;
+    img {
+        position: absolute; 
+        top: -60px; 
+        left: 8vw; 
+    }
+    article {
+        grid-column: 2/3; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        div {
+            width: 80%; 
+            h2 {
+                font-size: 2rem; 
+                margin-bottom: 3vh;
+            }
+        }  
+    }
+}
+
+// ======== Footer Styles
+
+footer {
+    margin-top: 10vh; 
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: end; 
+    align-items: flex-start;
+    background-color: hsl(240, 10%, 16%); 
+    border-radius: 0 40px 0 0;
+    padding: 10vh 10vw; 
+    article {
+        h4 {
+            font-size: 1.4rem; 
+            font-weight: 800;
+            margin-bottom: 3vh; 
+        }
+        ul {
+            li {
+                line-height: 50px;
+                font-weight: 200;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .navDesk {
+        display: none; 
+    }
+
+    .futureDesign {
+        text-align: center;
+        background: url("../img/illustration-editor-mobile.svg") no-repeat;
+        background-position: 50% 13%;
+        text-align: center;
+        padding: 10vh 10vw; 
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 70vh;  
+        }
+        article {
+            width: 100%;
+        }
+    }
+    
+    .futureDesignTwo { 
+        background: url("../img/illustration-laptop-mobile.svg") no-repeat;
+        background-position: top;
+        padding: 60vh 10vw 10vh 10vw; 
+        grid-template-columns: 1fr;
+    }
+    
+    .futureDesign, .futureDesignTwo {
+        article {
+            text-align: center;
+            h3 {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+
+    .stateArt {
+        margin: 10vh 0 8vh 0; 
+        height: 650px; 
+        display: block;
+        text-align: center;
+        background-position: 50% 90%;
+        border-radius: 0 70px 0 70px;
+        padding-top: 80%; 
+        img {
+            width: 100%; 
+            position: absolute; 
+            top: -70px; 
+            left: 0vw; 
+        }
+    }
+
+    footer {
+        margin-top: 0vh; 
+        display: block; 
+        text-align: center;
+        article {
+            h4 {
+                margin-top: 4vh; 
+            }
+        }
+    }
+
+}
