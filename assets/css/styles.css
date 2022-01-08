@@ -187,7 +187,7 @@ footer article ul li {
   font-weight: 200;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 414px) {
   .navDesk {
     display: none;
   }
