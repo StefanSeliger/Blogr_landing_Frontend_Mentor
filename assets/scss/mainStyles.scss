@@ -7,7 +7,11 @@
     padding: 0; 
     box-sizing: border-box; 
     font-family: 'Overpass', sans-serif;
+}
+
+body {
     max-width: 1440px;
+    margin: 0 auto; 
 }
 
 a {
@@ -110,7 +114,7 @@ header {
 // === Design for the future + Part 2
 .futureDesign {
     background: url("../img/illustration-editor-desktop.svg") no-repeat;
-    background-position: 200% 50%;
+    background-position: 800px 90px;
     text-align: center;
     padding: 30vh 10vw; 
     h2 {
@@ -164,7 +168,7 @@ header {
     img {
         position: absolute; 
         top: -60px; 
-        left: 8vw; 
+        left: 8%; 
     }
     article {
         grid-column: 2/3; 
