@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://stefanseliger.github.io/Blogr_landing_Frontend_Mentor/)
+- Solution URL: [https://stefanseliger.github.io/Blogr_landing_Frontend_Mentor/](https://stefanseliger.github.io/Blogr_landing_Frontend_Mentor/)
 
 ## My process
 
